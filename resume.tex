@@ -1,0 +1,214 @@
+%-------------------------
+% Resume - Renfred Alonge
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}
+{\vspace{-4pt}\scshape\raggedright\large}
+{}
+{0em}
+{}
+[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%---------- CUSTOM COMMANDS ----------
+\newcommand{\resumeItem}[1]{
+\item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{-2pt}\item
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{#1} & #2 \\
+\textit{\small #3} & \textit{\small #4} \\
+\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeItemListStart}{
+\begin{itemize}[leftmargin=*]
+}
+
+\newcommand{\resumeItemListEnd}{
+\end{itemize}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{
+\begin{itemize}[leftmargin=0.15in, label={}]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+\end{itemize}
+}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+\textbf{\Huge \scshape Renfred Alonge} \\ \vspace{1pt}
+\small Mississauga, Canada $|$ +1 (647) 457-6660 $|$
+\href{mailto:alongerenfred@gmail.com}{alongerenfred@gmail.com} $|$
+\href{https://www.linkedin.com/in/renfred-ai/}{LinkedIn} $|$
+\href{https://github.com/renfrrd-ai}{GitHub}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{University of Toronto -- Mississauga}
+{Expected Jun. 2029}
+{B.Sc. Computer Science and Mathematics}
+{}
+
+\resumeItemListStart
+\resumeItem{Lester B. Pearson International Scholar (2025 Cohort), GPA: 4.0/4.0}
+\resumeItem{Dean's List Scholar (Year 1)}
+\resumeItem{Relevant Coursework: Data Structures, Algorithms, Linear Algebra, Calculus, Probability, Statistics}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Full-Stack Software Engineer (Educational Platform)}
+{Nov. 2021 -- Jul. 2025}
+{SMATHS-Kids Initiative -- Ogun State, Nigeria}
+{}
+
+\resumeItemListStart
+\resumeItem{Engineered and maintained a production learning platform (smathskids.com) serving 700+ active students}
+\resumeItem{Designed RESTful backend services and admin dashboards for grading, analytics, and student tracking workflows}
+\resumeItem{Implemented automated reporting and data pipelines, reducing manual administrative workload by ~40\%}
+\resumeItem{Improved system reliability and scalability during user growth through backend refactoring and workflow optimization}
+\resumeItemListEnd
+
+\resumeSubheading
+{Software Engineer \& Automation Developer}
+{Jan. 2023 -- Jul. 2025}
+{Apt Scholars Universal College -- Ogun State, Nigeria}
+{}
+
+\resumeItemListStart
+\resumeItem{Built Python-based automation systems for quiz generation, grading pipelines, and student performance analytics}
+\resumeItem{Developed data processing workflows using Pandas and Excel automation, reducing grading turnaround time by ~50\%}
+\resumeItem{Improved instructional efficiency by replacing manual workflows with reusable scripting tools for educators}
+\resumeItem{Recognized as 2nd Best Teacher (Cowbellpedia STEM 2025); mentored students to national competition finals}
+\resumeItemListEnd
+
+\resumeSubheading
+{Data Management Intern}
+{Aug. 2021 -- Dec. 2022}
+{Smile Pride Dental Clinic -- Ogun State, Nigeria}
+{}
+
+\resumeItemListStart
+\resumeItem{Digitized and maintained confidential patient records with high accuracy across structured medical datasets}
+\resumeItem{Cleaned and corrected inconsistencies in legacy databases, improving data reliability for reporting workflows}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{\href{https://penciil.com}{Penciil} -- Full-Stack Assessment Platform (Flagship)}
+{}
+{React.js, Node.js, PostgreSQL, Redis, Docker}
+{}
+
+\resumeItemListStart
+\resumeItem{Built and deployed a full-stack assessment platform supporting exam creation, automated grading, analytics, and role-based workflows}
+\resumeItem{Designed relational PostgreSQL schemas and REST APIs for authentication, user management, assessment delivery, and grading workflows}
+\resumeItem{Implemented Redis-backed caching and asynchronous processing to improve performance across high-frequency assessment operations}
+\resumeItem{Containerized application services with Docker and designed isolated deployment workflows for reliable development and production environments}
+\resumeItemListEnd
+
+\resumeSubheading
+{\href{https://clueline.dev}{Clueline} -- AI Error Management Platform}
+{}
+{React.js, Next.js, Node.js, PostgreSQL, LLMs}
+{}
+
+\resumeItemListStart
+\resumeItem{Built an AI-powered error management platform that captures application failures and translates technical errors into plain-English explanations for end users}
+\resumeItem{Developed an error ingestion pipeline capturing stack traces, user feedback, and session context to give developers actionable incident data}
+\resumeItem{Integrated LLM-powered root-cause analysis to generate developer-facing explanations and suggested fixes using application and repository context}
+\resumeItem{Built a developer dashboard for monitoring, grouping, investigating, and resolving application errors alongside AI-generated insights}
+\resumeItemListEnd
+
+\resumeSubheading
+{DejaWHO -- Cognitive Analytics Platform}
+{}
+{React.js, Node.js, PostgreSQL, Machine Learning}
+{}
+
+\resumeItemListStart
+\resumeItem{Built a gamified cognitive assessment platform for tracking memory, reasoning, and behavioral performance trends}
+\resumeItem{Integrated ML-based scoring models for personalized cognitive performance analysis over time}
+\resumeItem{Designed secure backend data architecture for storing longitudinal user session data}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP-----------
+\section{Leadership \& Involvement}
+\resumeSubHeadingListStart
+
+\resumeItemListStart
+\resumeItem{Member, Pearson Scholars Social Planning Committee -- Organized campus-wide community events}
+\resumeItem{Community Advocate -- Delivered STEM outreach and youth empowerment presentations}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=*]
+\small
+\item{
+\textbf{Languages:} Python, JavaScript, SQL, C \\
+\textbf{Frontend:} React.js, Tailwind CSS \\
+\textbf{Backend:} Node.js, Express.js, FastAPI \\
+\textbf{Databases \& Tools:} PostgreSQL, Redis, Docker, Git, REST APIs \\
+\textbf{ML/Data:} Scikit-learn, Pandas, NumPy
+}
+\end{itemize}
+
+\end{document}
