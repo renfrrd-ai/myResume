@@ -2,6 +2,7 @@
 
 LaTeX source for my resume, built on a classic single-column template
 (`article` class, custom `\resume*` macros for consistent formatting).
+Visible at https://renfred.dev/resume
 
 ## Build
 
