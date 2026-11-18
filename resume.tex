@@ -87,8 +87,8 @@
 
 %-----------SUMMARY-----------
 \section{Summary}
-\small{Full-stack engineer whose software has served 700+ students and cut school grading and reporting work by 30--50\%.
-Founder of Penciil, an assessment platform for schools whose MVP I built solo and piloted, cutting grading time by 30\%.}
+\small{Full-stack engineer (React, Node.js, PostgreSQL, Redis, Docker) with four years of production experience before university.
+Built Penciil's assessment platform solo, cutting grading time by 30\% in a live pilot; earlier systems served 700+ students.}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -100,8 +100,7 @@ Founder of Penciil, an assessment platform for schools whose MVP I built solo an
 {Mississauga, ON}
 \resumeItemListStart
 \resumeItem{GPA 4.0 / 4.0. Lester B. Pearson International Scholar (2025 cohort); Dean's List (Year 1).}
-\resumeItem{Incoming research with Prof. Lisa Zhang on threshold concepts in machine learning: the ideas that, once grasped,
-change how students understand the field.}
+\resumeItem{Incoming research with Prof. Lisa Zhang on threshold concepts in machine learning.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -116,6 +115,7 @@ change how students understand the field.}
 \resumeItemListStart
 \resumeItem{Reduced grading time by 30\% in a live pilot at a secondary school by replacing its separate assessment tools with one
 system: exam creation, scanned scripts, grading, course analytics and per-student feedback in a single workflow.}
+\resumeItem{Shipped the MVP solo in about four months, owning the full stack from database schema and APIs to frontend and deployment.}
 \resumeItem{Gave each group that runs assessment (lecturers, TAs, heads of department, faculty administrators) its own role,
 permissions and view, so each sees only what it needs to act on.}
 \resumeItem{Removed export-and-reconcile work entirely by putting authentication, courses, exam delivery and grading on one PostgreSQL
@@ -137,7 +137,9 @@ error; developers get stack traces, session context, and an LLM-generated root c
 \resumeItem{Grounded fix suggestions in the developer's connected GitHub repository, so they point at the actual code instead of guessing
 from the stack trace; offered repo connection on every tier to remove the main barrier to trying it.}
 \resumeItem{Kept installs lean by splitting the SDK into \texttt{@clueline/core} plus React and Next.js packages, so apps pull in only what
-their framework needs; SDKs live in a monorepo, separate from the dashboard and ingestion API.}
+their framework needs; published under a reserved \texttt{@clueline} npm scope.}
+\resumeItem{Structured the codebase to grow beyond JavaScript: a \texttt{clueline-js} monorepo for the JS/TS SDKs, a separate \texttt{clueline-app}
+repo for the dashboard and ingestion API, and room for standalone Python and Go SDK repos.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -169,14 +171,28 @@ per-student performance reports; packaged them so other teachers ran them withou
 
 \resumeSubHeadingListEnd
 
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubheading
+{\href{https://uofthub.com}{uofthub}}
+{2026 -- Present}
+{Open-source project-sharing platform for U of T students across all faculties}
+{TypeScript, React, Fastify, PostgreSQL, Prisma}
+\resumeItemListStart
+\resumeItem{Architected a TypeScript monorepo (pnpm workspaces) with a shared types package, so the React frontend and Fastify API
+share one contract and type errors surface at build time; GitHub Actions runs typecheck, tests, lint and build on every push.}
+\resumeItem{Delivered live updates without extra infrastructure using PostgreSQL LISTEN/NOTIFY; added U of T sign-in via Microsoft Entra ID,
+file storage on Cloudflare R2, and AI-powered project search with a keyword fallback so discovery still works if the model is down.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
 %-----------LEADERSHIP-----------
 \section{Teaching \& Leadership}
 \resumeItemListStart
 \resumeItem{Designed and presented the workshop \href{https://renfred.dev/pearson2026}{\textit{Why the Best Path Sometimes Goes Backwards}} at the Pearson Conference 2026
-(U of T, Bahen Centre), teaching local optima through ``The Hiker in the Fog,'' an interactive game I designed where participants must move away from
-the goal to eventually reach it.}
-\resumeItem{Run exam-prep sessions for classmates before midterms and finals; reviewed student workshop applications on the conference's review panel.}
-\resumeItem{Member, Pearson Scholars Social Planning Committee: organize campus-wide community events.}
+(U of T), teaching local optima through ``The Hiker in the Fog,'' a game I designed where players must move away from the goal to reach it.}
+\resumeItem{Run exam-prep sessions for classmates before midterms and finals; reviewed workshop applications on the conference's review panel.}
 \resumeItemListEnd
 
 %-----------SKILLS-----------
@@ -184,8 +200,8 @@ the goal to eventually reach it.}
 \begin{itemize}[leftmargin=0.15in, label={}, topsep=2pt]
 \small
 \item{
-\textbf{Languages:} Python, JavaScript, Java, SQL, C $\cdot$ \textbf{Web:} React.js, Next.js, Node.js, Express.js, FastAPI, Tailwind CSS \\
-\textbf{Data \& Infra:} PostgreSQL, Redis, Docker, Git, Linux, REST API design $\cdot$ \textbf{AI/ML:} LLM integration, Scikit-learn, Pandas, NumPy
+\textbf{Languages:} Python, JavaScript, TypeScript, Java, SQL, C $\cdot$ \textbf{Web:} React.js, Next.js, Node.js, Express.js, Fastify, FastAPI, Tailwind \\
+\textbf{Data \& Infra:} PostgreSQL, Prisma, Redis, Docker, Cloudflare R2, GitHub Actions, Linux, REST API design $\cdot$ \textbf{AI/ML:} LLM integration, Scikit-learn, Pandas, NumPy
 }
 \end{itemize}
 
