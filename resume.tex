@@ -87,8 +87,8 @@
 
 %-----------SUMMARY-----------
 \section{Summary}
-\small{Full-stack engineer with four years of shipping production software before university, including a learning platform used by
-700+ students. Founder of Penciil, an assessment platform for schools whose MVP I built solo.}
+\small{Full-stack engineer whose software has served 700+ students and cut school grading and reporting work by 40--50\%.
+Founder of Penciil, an assessment platform for schools whose MVP I built solo.}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -114,20 +114,18 @@ change how students understand the field.}
 {\href{https://penciil.com}{Penciil} $\cdot$ Assessment Platform for Schools}
 {React.js, Node.js, PostgreSQL, Redis, Docker}
 \resumeItemListStart
-\resumeItem{Built the end-to-end assessment workflow schools run on: a lecturer creates an exam, scripts are scanned in and graded,
-and the results flow straight into course analytics and feedback for each student, all in one system instead of separate tools.}
-\resumeItem{Designed it around the people who run assessment. Lecturers, teaching assistants, heads of department and faculty
-administrators each get their own role, permissions and view.}
-\resumeItem{Designed the PostgreSQL schema and REST APIs for authentication, courses, exam delivery and grading as one data model,
-so analytics and feedback read from the same records graders write to instead of separate exports.}
-\resumeItem{Moved the heavy work (grading runs, analytics) onto asynchronous jobs with Redis-backed caching, so it runs in the
-background without slowing the app. Containerized each service with Docker, with separate development and production setups.}
-\resumeItem{Expanding Penciil into a suite of course tools modelled on what U of T runs (MarkUs, Piazza, MathMatize). First up is Folio
-(folio.penciil.com), a rebranded fork of MarkUs, U of T's open-source grading tool. It tracks upstream and changes only the UI,
-so security and bug fixes keep flowing in without maintaining a diverging codebase.}
-\resumeItem{Run the business side too. I wrote the PRD, market analysis, ideal customer profile, buyer personas and go-to-market plan;
-I am targeting open universities and secondary schools in Nigeria first, before slower-moving traditional universities. I also built
-the brand, website and domain, and filed the trademark.}
+\resumeItem{Replaced the patchwork of separate tools schools use for assessment with one system: exam creation, scanned scripts,
+grading, course analytics and per-student feedback in a single workflow.}
+\resumeItem{Gave each group that runs assessment (lecturers, TAs, heads of department, faculty administrators) its own role,
+permissions and view, so each sees only what it needs to act on.}
+\resumeItem{Removed export-and-reconcile work entirely by putting authentication, courses, exam delivery and grading on one PostgreSQL
+data model: analytics and feedback read the same records graders write.}
+\resumeItem{Kept the app responsive during grading runs and analytics by moving them to asynchronous jobs with Redis-backed caching;
+containerized every service with Docker, with separate development and production setups.}
+\resumeItem{Launched Folio (folio.penciil.com), the first tool in a course-tools suite modelled on U of T's (MarkUs, Piazza, MathMatize).
+A rebranded fork of MarkUs that changes only the UI, it inherits every upstream security and bug fix at near-zero maintenance cost.}
+\resumeItem{Took the company from idea to market-ready on my own: PRD, market analysis, ICP, buyer personas and a go-to-market plan
+that targets Nigerian open universities and secondary schools first; built the brand, website and domain, and filed the trademark.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -136,16 +134,14 @@ the brand, website and domain, and filed the trademark.}
 {\href{https://clueline.dev}{Clueline} $\cdot$ AI Error Monitoring (In Development)}
 {Next.js, React.js, Node.js, PostgreSQL, LLMs}
 \resumeItemListStart
-\resumeItem{Building an error-monitoring tool with two audiences: end users get a plain-English explanation of what went wrong;
-developers get stack traces, session context, and an LLM-generated root cause and suggested fix.}
-\resumeItem{Split the SDK into a core package plus framework-specific packages (\texttt{@clueline/core}, then React and Next.js) instead
-of one universal package. The SDKs live in a monorepo, separate from the dashboard and ingestion API.}
-\resumeItem{The fix suggestions read the developer's connected GitHub repository, so they point at the actual code instead of
-guessing from the stack trace alone. Repo connection is available on every tier, not locked behind a paid plan.}
-\resumeItem{Wrote the PRD, architecture doc and phased build plan; positioned the product against Sentry by serving end users as
-well as developers.}
+\resumeItem{Building error monitoring that serves both sides of a failure: end users get a plain-English explanation instead of a cryptic
+error; developers get stack traces, session context, and an LLM-generated root cause and suggested fix.}
+\resumeItem{Grounded fix suggestions in the developer's connected GitHub repository, so they point at the actual code instead of guessing
+from the stack trace; offered repo connection on every tier to remove the main barrier to trying it.}
+\resumeItem{Kept installs lean by splitting the SDK into \texttt{@clueline/core} plus React and Next.js packages, so apps pull in only what
+their framework needs; SDKs live in a monorepo, separate from the dashboard and ingestion API.}
+\resumeItem{Differentiated the product from Sentry by serving end users as well as developers; wrote the PRD, architecture doc and phased build plan.}
 \resumeItemListEnd
-
 
 \resumeSubheading
 {Full-Stack Software Engineer}
@@ -153,12 +149,12 @@ well as developers.}
 {SMATHS-Kids Initiative $\cdot$ Educational Platform}
 {Ogun State, Nigeria}
 \resumeItemListStart
-\resumeItem{Built and maintained \href{https://smathskids.com}{smathskids.com}, the production learning platform for 700+ active students, as its main engineer:
-student accounts, course content, assessments, and the admin dashboards staff used for grading and tracking progress.}
-\resumeItem{Designed the REST backend behind grading, analytics and student tracking, so every dashboard read from the same student
-records rather than each workflow keeping its own.}
-\resumeItem{Automated the reports staff had been assembling by hand. Data pipelines now generate student and class reports directly
-from platform data, cutting manual administrative work by about 40\%.}
+\resumeItem{Kept \href{https://smathskids.com}{smathskids.com} running for 700+ active students as its main engineer, owning student accounts,
+course content, assessments, and the admin dashboards staff used for grading and tracking progress.}
+\resumeItem{Cut manual administrative work by about 40\% by automating the student and class reports staff had assembled by hand,
+with data pipelines that generate them directly from platform data.}
+\resumeItem{Gave staff one consistent picture of every student by designing the REST backend so grading, analytics and tracking
+dashboards all read from the same records instead of each workflow keeping its own.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -167,10 +163,10 @@ from platform data, cutting manual administrative work by about 40\%.}
 {Apt Scholars Universal College}
 {Ogun State, Nigeria}
 \resumeItemListStart
-\resumeItem{Built Python tools that generate quizzes, grade them, and turn the results into per-student performance reports, replacing
-the manual process teachers repeated every term.}
-\resumeItem{Wrote Pandas and Excel-automation pipelines that take score sheets from raw marks to finished reports, cutting grading
-turnaround by about 50\%. Packaged them as reusable scripts other teachers could run without help.}
+\resumeItem{Cut grading turnaround by about 50\% with Pandas and Excel-automation pipelines that take score sheets from raw marks to
+finished reports.}
+\resumeItem{Ended a manual process teachers repeated every term with Python tools that generate quizzes, grade them and produce
+per-student performance reports; packaged them so other teachers ran them without help.}
 \resumeItem{Also taught STEM: named 2nd Best Teacher (Cowbellpedia STEM 2025) and coached students to national competition finals.}
 \resumeItemListEnd
 
