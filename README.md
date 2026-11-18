@@ -8,10 +8,28 @@ Visible at https://renfred.dev/resume
 
 ```bash
 pdflatex resume.tex
+pdflatex resume.tex
 ```
 
-Requires a standard TeX Live distribution (uses `titlesec`, `enumitem`,
-`hyperref`, `fancyhdr`, `tabularx`, `marvosym`, `glyphtounicode`).
+Run it twice — the first pass writes the `hyperref` link targets, the second
+resolves them. Output is `resume.pdf` in the same directory.
+
+### Dependencies
+
+Beyond a base TeX install, the preamble pulls in `fullpage` (from the
+`preprint` bundle), `titlesec`, `enumitem` and `marvosym`. On Debian/Ubuntu
+these are *not* part of `texlive-latex-base`:
+
+```bash
+sudo apt install texlive-latex-extra texlive-fonts-extra
+```
+
+The rest (`latexsym`, `color`, `verbatim`, `hyperref`, `fancyhdr`, `babel`,
+`tabularx`, `glyphtounicode`) ship with a base install.
+
+If you can't install system-wide, the same four packages work from a user
+tree at `~/texmf` using the TDS layout (`~/texmf/tex/latex/<pkg>/`), which
+`pdflatex` picks up with no extra configuration.
 
 ## Structure
 
