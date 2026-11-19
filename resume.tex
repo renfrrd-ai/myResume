@@ -85,11 +85,6 @@
 \end{center}
 \vspace{-6pt}
 
-%-----------SUMMARY-----------
-\section{Summary}
-\small{Full-stack engineer (React, Node.js, PostgreSQL, Redis, Docker) with four years of production experience before university.
-Built Penciil's assessment platform solo, cutting grading time by 30\% in a live pilot; earlier systems served 700+ students.}
-
 %-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
@@ -100,7 +95,7 @@ Built Penciil's assessment platform solo, cutting grading time by 30\% in a live
 {Mississauga, ON}
 \resumeItemListStart
 \resumeItem{GPA 4.0 / 4.0. Lester B. Pearson International Scholar (2025 cohort); Dean's List (Year 1).}
-\resumeItem{Incoming research with Prof. Lisa Zhang on threshold concepts in machine learning.}
+\resumeItem{Incoming independent study (CSC392, Winter 2027) and summer research with Prof. Lisa Zhang on threshold concepts in ML.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -116,30 +111,12 @@ Built Penciil's assessment platform solo, cutting grading time by 30\% in a live
 \resumeItem{Reduced grading time by 30\% in a live pilot at a secondary school by replacing its separate assessment tools with one
 system: exam creation, scanned scripts, grading, course analytics and per-student feedback in a single workflow.}
 \resumeItem{Shipped the MVP solo in about four months, owning the full stack from database schema and APIs to frontend and deployment.}
-\resumeItem{Gave each group that runs assessment (lecturers, TAs, heads of department, faculty administrators) its own role,
-permissions and view, so each sees only what it needs to act on.}
-\resumeItem{Removed export-and-reconcile work entirely by putting authentication, courses, exam delivery and grading on one PostgreSQL
-data model: analytics and feedback read the same records graders write.}
+\resumeItem{Removed export-and-reconcile work by putting auth, courses, exam delivery and grading on one PostgreSQL data model,
+with a separate role and view for lecturers, TAs, heads of department and administrators.}
 \resumeItem{Kept the app responsive during grading runs and analytics by moving them to asynchronous jobs with Redis-backed caching;
 containerized every service with Docker, with separate development and production setups.}
-\resumeItem{Launched Folio (folio.penciil.com), the first tool in a course-tools suite modelled on U of T's (MarkUs, Piazza, MathMatize).
-A rebranded fork of MarkUs that changes only the UI, it inherits every upstream security and bug fix at near-zero maintenance cost.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Co-Founder}
-{2026 -- Present}
-{\href{https://clueline.dev}{Clueline} $\cdot$ AI Error Monitoring (In Development)}
-{Next.js, React.js, Node.js, PostgreSQL, LLMs}
-\resumeItemListStart
-\resumeItem{Building error monitoring that serves both sides of a failure: end users get a plain-English explanation instead of a cryptic
-error; developers get stack traces, session context, and an LLM-generated root cause and suggested fix.}
-\resumeItem{Grounded fix suggestions in the developer's connected GitHub repository, so they point at the actual code instead of guessing
-from the stack trace; offered repo connection on every tier to remove the main barrier to trying it.}
-\resumeItem{Kept installs lean by splitting the SDK into \texttt{@clueline/core} plus React and Next.js packages, so apps pull in only what
-their framework needs; published under a reserved \texttt{@clueline} npm scope.}
-\resumeItem{Structured the codebase to grow beyond JavaScript: a \texttt{clueline-js} monorepo for the JS/TS SDKs, a separate \texttt{clueline-app}
-repo for the dashboard and ingestion API, and room for standalone Python and Go SDK repos.}
+\resumeItem{Launched Folio (folio.penciil.com), the first tool in a planned course-tools suite, as a rebranded fork of MarkUs instead of a rebuild,
+so it inherits every upstream security and bug fix at near-zero maintenance cost.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -175,6 +152,16 @@ per-student performance reports; packaged them so other teachers ran them withou
 \section{Projects}
 \resumeSubHeadingListStart
 \resumeSubheading
+{Neural Network Visualizer}
+{2026 -- Present}
+{Interactive web explorer of how neural networks compute, step by step}
+{}
+\resumeItemListStart
+\resumeItem{Building an interactive page that animates what each architecture does: a CNN kernel sliding across an image to build
+a feature map, pooling downsampling it, activations flowing through a dense network, and an RNN carrying hidden state across timesteps.}
+\resumeItem{Designed for students new to these ideas: each network is shown as the operations it performs, not a static box diagram.}
+\resumeItemListEnd
+\resumeSubheading
 {\href{https://uofthub.com}{uofthub}}
 {2026 -- Present}
 {Open-source project-sharing platform for U of T students across all faculties}
@@ -184,6 +171,18 @@ per-student performance reports; packaged them so other teachers ran them withou
 share one contract and type errors surface at build time; GitHub Actions runs typecheck, tests, lint and build on every push.}
 \resumeItem{Delivered live updates without extra infrastructure using PostgreSQL LISTEN/NOTIFY; added U of T sign-in via Microsoft Entra ID,
 file storage on Cloudflare R2, and AI-powered project search with a keyword fallback so discovery still works if the model is down.}
+\resumeItemListEnd
+
+\resumeSubheading
+{\href{https://clueline.dev}{Clueline} (Co-Founder)}
+{2026 -- Present}
+{AI error monitoring for developers and their end users}
+{Next.js, React.js, Node.js, PostgreSQL, LLMs}
+\resumeItemListStart
+\resumeItem{Building error monitoring that serves both sides of a failure: end users get a plain-English explanation instead of a cryptic error;
+developers get stack traces, session context, and an LLM-generated root cause and fix grounded in their connected GitHub repository.}
+\resumeItem{Split the SDK into \texttt{@clueline/core} plus React and Next.js packages (\texttt{@clueline} npm scope),
+so apps install only what their framework needs.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
