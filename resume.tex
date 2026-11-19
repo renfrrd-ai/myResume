@@ -113,8 +113,6 @@ system: exam creation, scanned scripts, grading, course analytics and per-studen
 \resumeItem{Shipped the MVP solo in about four months, owning the full stack from database schema and APIs to frontend and deployment.}
 \resumeItem{Removed export-and-reconcile work by putting auth, courses, exam delivery and grading on one PostgreSQL data model,
 with a separate role and view for lecturers, TAs, heads of department and administrators.}
-\resumeItem{Kept the app responsive during grading runs and analytics by moving them to asynchronous jobs with Redis-backed caching;
-containerized every service with Docker, with separate development and production setups.}
 \resumeItem{Launched Folio (folio.penciil.com) as a rebranded MarkUs fork instead of a rebuild, inheriting every upstream fix at near-zero cost.}
 \resumeItemListEnd
 
@@ -128,8 +126,6 @@ containerized every service with Docker, with separate development and productio
 course content, assessments, and the admin dashboards staff used for grading and tracking progress.}
 \resumeItem{Cut manual administrative work by about 40\% by automating the student and class reports staff had assembled by hand,
 with data pipelines that generate them directly from platform data.}
-\resumeItem{Gave staff one consistent picture of every student by designing the REST backend so grading, analytics and tracking
-dashboards all read from the same records instead of each workflow keeping its own.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -138,9 +134,8 @@ dashboards all read from the same records instead of each workflow keeping its o
 {Apt Scholars Universal College}
 {Ogun State, Nigeria}
 \resumeItemListStart
-\resumeItem{Cut grading turnaround by about 50\% with Pandas and Excel-automation pipelines that take score sheets from raw marks to
-finished reports.}
-\resumeItem{Replaced a manual process repeated every term with Python tools that generate, grade and report on quizzes, used by other teachers.}
+\resumeItem{Cut grading turnaround by about 50\% with Pandas and Python tools that generate quizzes, grade them and turn raw marks into
+per-student reports, replacing a manual process repeated every term.}
 \resumeItem{Built \href{https://mathsqueteers.com}{mathsqueteers.com} for its maths and STEM programme: programme pages for Olympiad prep, competitions,
 mentorship and workshops, a free resources hub, and online student registration (PHP, mobile-first, SEO metadata).}
 \resumeItem{Also taught STEM: named 2nd Best Teacher (Cowbellpedia STEM 2025) and coached students to national competition finals.}
@@ -161,7 +156,6 @@ mentorship and workshops, a free resources hub, and online student registration 
 its weighted sum and bias with the real numbers, or follow one attention row from query--key scores through softmax.}
 \resumeItem{Convolution tab: draw on an image and watch a 3$\times$3 kernel fill the feature map step by step, with a dozen preset filters
 (Sobel, Laplacian, colour), custom kernels, stride and padding, then run it on a 160$\times$160 upload and pool it down to 20$\times$20.}
-\resumeItem{Dependency-free JavaScript with no build step; each chapter is a self-contained module, so adding an architecture takes one script.}
 \resumeItemListEnd
 \resumeSubheading
 {\href{https://uofthub.com}{uofthub}}
