@@ -15,6 +15,8 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
 \input{glyphtounicode}
 
 \pagestyle{fancy}
@@ -38,13 +40,13 @@
 {}
 {0em}
 {}
-[\color{black}\titlerule \vspace{-7pt}]
+[{\color{black}\titlerule[0.3pt]}\vspace{-7pt}]
 
 \pdfgentounicode=1
 
 %---------- CUSTOM COMMANDS ----------
 \newcommand{\resumeItem}[1]{
-\item\small{#1 \vspace{-3pt}}
+\item\normalsize{#1 \vspace{-3pt}}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -94,8 +96,7 @@
 {Honours B.Sc., Computer Science and Mathematics}
 {Mississauga, ON}
 \resumeItemListStart
-\resumeItem{GPA 4.0 / 4.0; Dean's List (Year 1).}
-\resumeItem{Lester B. Pearson International Scholarship (2025 cohort, \$400,000 CAD); UTM Entrance Award (\$180,000 CAD).}
+\resumeItem{GPA 4.0 / 4.0; Dean's List (Year 1); Lester B. Pearson Scholarship (\$400,000 CAD); UTM Entrance Award (\$180,000).}
 \resumeItem{Incoming independent study (CSC392, Winter 2027) and research with Prof. Lisa Zhang on threshold concepts in ML.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
@@ -111,12 +112,10 @@
 \resumeItemListStart
 \resumeItem{Reduced grading time by 30\% in a live pilot at a secondary school by replacing its separate assessment tools with one
 system: exam creation, scanned scripts, grading, course analytics and per-student feedback in a single workflow.}
-\resumeItem{Shipped the MVP solo in about four months, owning the full stack from database schema and APIs to frontend and deployment.}
+\resumeItem{Shipped the MVP solo in about four months, owning the full stack from database schema and APIs to deployment.}
 \resumeItem{Removed export-and-reconcile work by putting auth, courses, exam delivery and grading on one PostgreSQL data model,
 with a separate role and view for lecturers, TAs, heads of department and administrators.}
-\resumeItem{Kept the app responsive during grading runs and analytics by moving them to asynchronous jobs with Redis-backed caching;
-containerized every service with Docker, with separate development and production setups.}
-\resumeItem{Launched Folio (folio.penciil.com) as a rebranded MarkUs fork instead of a rebuild, inheriting every upstream fix at near-zero cost.}
+\resumeItem{Kept the app responsive with async grading jobs and Redis caching; containerized every service with Docker.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -127,8 +126,7 @@ containerized every service with Docker, with separate development and productio
 \resumeItemListStart
 \resumeItem{Kept \href{https://smathskids.com}{smathskids.com} running for 700+ active students as its main engineer, owning student accounts,
 course content, assessments, and the admin dashboards staff used for grading and tracking progress.}
-\resumeItem{Cut manual administrative work by about 40\% by automating the student and class reports staff had assembled by hand,
-with data pipelines that generate them directly from platform data.}
+\resumeItem{Cut manual administrative work by about 40\% with data pipelines that generate the reports staff built by hand.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -137,11 +135,9 @@ with data pipelines that generate them directly from platform data.}
 {Apt Scholars Universal College}
 {Ogun State, Nigeria}
 \resumeItemListStart
-\resumeItem{Cut grading turnaround by about 50\% with Pandas and Python tools that generate quizzes, grade them and turn raw marks into
-per-student reports, replacing a manual process repeated every term.}
-\resumeItem{Built \href{https://mathsqueteers.com}{mathsqueteers.com} for its maths and STEM programme: programme pages for Olympiad prep, competitions,
-mentorship and workshops, a free resources hub, and online student registration (PHP, mobile-first, SEO metadata).}
-\resumeItem{Also taught STEM: named 2nd Best Teacher (Cowbellpedia STEM 2025) and coached students to national competition finals.}
+\resumeItem{Cut grading turnaround by about 50\% with Python and Pandas tools that generate, grade and report on quizzes.}
+\resumeItem{Built \href{https://mathsqueteers.com}{mathsqueteers.com} for its STEM programme: programme pages, a resources hub and online registration (PHP).}
+\resumeItem{Also taught STEM: named 2nd Best Teacher (Cowbellpedia STEM 2025); coached students to national finals.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -151,24 +147,23 @@ mentorship and workshops, a free resources hub, and online student registration 
 \resumeSubHeadingListStart
 \resumeSubheading
 {\href{https://ml.renfred.dev}{Neural Network Visualizer}}
-{2026 -- Present}
+{}
 {Interactive article showing what neural network layers compute, one number at a time}
 {JavaScript, HTML Canvas}
 \resumeItemListStart
 \resumeItem{Built six interactive chapters (perceptron, dense networks, convolution, pooling, RNNs, attention); click any neuron to see
 its weighted sum and bias with the real numbers, or follow one attention row from query--key scores through softmax.}
 \resumeItem{Convolution tab: draw on an image and watch a 3$\times$3 kernel fill the feature map step by step, with a dozen preset filters
-(Sobel, Laplacian, colour), custom kernels, stride and padding, then run it on a 160$\times$160 upload and pool it down to 20$\times$20.}
-\resumeItem{Dependency-free JavaScript with no build step; each chapter is a self-contained module, so adding an architecture takes one script.}
+(Sobel, Laplacian), custom kernels, stride and padding, then run it on a 160$\times$160 upload and pool it down to 20$\times$20.}
 \resumeItemListEnd
 \resumeSubheading
 {\href{https://unstakd.com}{Unstakd}}
-{2026 -- Present}
+{}
 {Self-hosted deployment platform (PaaS) for my own projects}
 {Next.js, TypeScript, Docker, Caddy, BullMQ, Redis, PostgreSQL}
 \resumeItemListStart
-\resumeItem{Built a personal PaaS that hosts 5 of my projects: a git push fires a GitHub webhook, a BullMQ worker builds a commit-tagged image
-(Dockerfile, Railpack or static), and the app goes live at its own subdomain with automatic HTTPS via Caddy.}
+\resumeItem{Built a personal PaaS that hosts 5 of my projects: a git push fires a GitHub webhook, a BullMQ worker builds a
+commit-tagged image, and the app goes live at its own subdomain with automatic HTTPS via Caddy.}
 \resumeItem{Made deploys zero-downtime: each new container must pass a health check before Caddy switches traffic, so a failed build never takes
 down the live version, with one-click rollback that skips the rebuild.}
 \resumeItem{Added one-click Postgres and Redis on a private Docker network, with connection strings injected into linked apps and backups to Cloudflare R2;
@@ -176,14 +171,14 @@ consolidated hosting from several providers into one unified cost.}
 \resumeItemListEnd
 \resumeSubheading
 {\href{https://uofthub.com}{uofthub}}
-{2026 -- Present}
+{}
 {Open-source project-sharing platform for U of T students across all faculties}
 {TypeScript, React, Fastify, PostgreSQL, Prisma}
 \resumeItemListStart
 \resumeItem{Architected a TypeScript monorepo (pnpm workspaces) with a shared types package, so the React frontend and Fastify API
 share one contract and type errors surface at build time; GitHub Actions runs typecheck, tests, lint and build on every push.}
-\resumeItem{Delivered live updates without extra infrastructure using PostgreSQL LISTEN/NOTIFY; added U of T sign-in via Microsoft Entra ID,
-file storage on Cloudflare R2, and AI-powered project search with a keyword fallback so discovery still works if the model is down.}
+\resumeItem{Delivered live updates with PostgreSQL LISTEN/NOTIFY; added U of T sign-in (Entra ID), Cloudflare R2 storage,
+and AI-powered project search with a keyword fallback so discovery still works if the model is down.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -191,10 +186,10 @@ file storage on Cloudflare R2, and AI-powered project search with a keyword fall
 %-----------LEADERSHIP-----------
 \section{Teaching \& Extracurriculars}
 \resumeItemListStart
-\resumeItem{Designed and presented the workshop \href{https://renfred.dev/pearson2026}{\textit{Why the Best Path Sometimes Goes Backwards}} at the Pearson Conference 2026
-(U of T), teaching local optima through ``The Hiker in the Fog,'' a game I designed where players must move away from the goal to reach it.}
-\resumeItem{Run exam-prep sessions for classmates before midterms and finals; reviewed workshop applications on the conference's review panel.}
-\resumeItem{Volunteer with GDG on Campus UTM, GDG Toronto, TEDxUTM, and the UTM Math \& Computational Sciences Society (MCSS).}
+\resumeItem{Designed and presented the workshop \href{https://renfred.dev/pearson2026}{\textit{Why the Best Path Sometimes Goes Backwards}} at the Pearson Conference
+2026, teaching local optima through ``The Hiker in the Fog,'' a game I designed.}
+\resumeItem{Run exam-prep sessions for classmates before midterms and finals; reviewed conference workshop applications.}
+\resumeItem{Volunteer with GDG on Campus UTM, GDG Toronto, TEDxUTM, and UTM Math \& Computational Sciences Society.}
 \resumeItemListEnd
 
 %-----------SKILLS-----------
@@ -202,8 +197,8 @@ file storage on Cloudflare R2, and AI-powered project search with a keyword fall
 \begin{itemize}[leftmargin=0.15in, label={}, topsep=2pt]
 \small
 \item{
-\textbf{Languages:} Python, JavaScript, TypeScript, Java, SQL, PHP, C $\cdot$ \textbf{Web:} React, Next.js, Node.js, Express, Fastify, FastAPI, Tailwind \\
-\textbf{Data \& Infra:} PostgreSQL, Prisma, Redis, Docker, Cloudflare R2, GitHub Actions, Linux $\cdot$ \textbf{AI/ML:} LLM integration, Scikit-learn, Pandas, NumPy
+\textbf{Languages:} Python, JavaScript, TypeScript, Java, SQL, PHP, C $\cdot$ \textbf{Web:} React, Next.js, Node.js, Express, Fastify, FastAPI \\
+\textbf{Data \& Infra:} PostgreSQL, Redis, Docker, Caddy, Cloudflare R2, GitHub Actions, Linux $\cdot$ \textbf{AI/ML:} Scikit-learn, Pandas, NumPy
 }
 \end{itemize}
 
