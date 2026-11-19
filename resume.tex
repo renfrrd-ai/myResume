@@ -76,7 +76,7 @@
 %----------HEADING----------
 \begin{center}
 {\Huge \scshape Renfred Alonge} \\ \vspace{2pt}
-\small Full-Stack Software Engineer $\cdot$ Founder \& CTO, Penciil \\ \vspace{1pt}
+\small Full-Stack Software Engineer \\ \vspace{1pt}
 \small Mississauga, ON $\cdot$ +1 (647) 457-6660 $\cdot$
 \href{mailto:alongerenfred@gmail.com}{alongerenfred@gmail.com} $\cdot$
 \href{https://renfred.dev}{renfred.dev} $\cdot$
@@ -95,7 +95,7 @@
 {Mississauga, ON}
 \resumeItemListStart
 \resumeItem{GPA 4.0 / 4.0. Lester B. Pearson International Scholar (2025 cohort); Dean's List (Year 1).}
-\resumeItem{Incoming independent study (CSC392, Winter 2027) and summer research with Prof. Lisa Zhang on threshold concepts in ML.}
+\resumeItem{Incoming independent study (CSC392, Winter 2027) and research with Prof. Lisa Zhang on threshold concepts in ML.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -103,7 +103,7 @@
 \section{Experience}
 \resumeSubHeadingListStart
 \resumeSubheading
-{Founder \& Chief Technology Officer}
+{Founder \& Lead Engineer}
 {2026 -- Present}
 {\href{https://penciil.com}{Penciil} $\cdot$ Assessment Platform for Schools}
 {React.js, Node.js, PostgreSQL, Redis, Docker}
@@ -163,12 +163,14 @@ database provisioning and management, and custom domains, replacing separate hos
 \resumeSubheading
 {\href{https://ml.renfred.dev}{Neural Network Visualizer}}
 {2026 -- Present}
-{Interactive web explorer of how neural networks compute, step by step}
-{}
+{Interactive article showing what neural network layers compute, one number at a time}
+{JavaScript, HTML Canvas}
 \resumeItemListStart
-\resumeItem{Building an interactive page that animates what each architecture does: a CNN kernel sliding across an image to build
-a feature map, pooling downsampling it, activations flowing through a dense network, and an RNN carrying hidden state across timesteps.}
-\resumeItem{Designed for students new to these ideas: each network is shown as the operations it performs, not a static box diagram.}
+\resumeItem{Built six interactive chapters (perceptron, dense networks, convolution, pooling, RNNs, attention); click any neuron to see
+its weighted sum and bias with the real numbers, or follow one attention row from query--key scores through softmax.}
+\resumeItem{Convolution tab: draw on an image and watch a 3$\times$3 kernel fill the feature map step by step, with a dozen preset filters
+(Sobel, Laplacian, colour), custom kernels, stride and padding, then run it on a 160$\times$160 upload and pool it down to 20$\times$20.}
+\resumeItem{Dependency-free JavaScript with no build step; each chapter is a self-contained module, so adding an architecture takes one script.}
 \resumeItemListEnd
 \resumeSubheading
 {\href{https://uofthub.com}{uofthub}}
