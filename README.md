@@ -35,6 +35,7 @@ tree at `~/texmf` using the TDS layout (`~/texmf/tex/latex/<pkg>/`), which
 
 - `resume.tex` — main source file
 - `resume.pdf` — compiled output
+- `research/` — research-focused version (Research section first, for roles like Google Student Researcher). Build it the same way from inside `research/`.
 
 ## License
 
