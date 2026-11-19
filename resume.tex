@@ -166,6 +166,8 @@ its weighted sum and bias with the real numbers, or follow one attention row fro
 commit-tagged image, and the app goes live at its own subdomain with automatic HTTPS via Caddy.}
 \resumeItem{Made deploys zero-downtime: each new container must pass a health check before Caddy switches traffic, so a failed build never takes
 down the live version, with one-click rollback that skips the rebuild.}
+\resumeItem{Deployed the whole stack on one Ubuntu VPS with an idempotent setup script that hardens it: firewall limited to
+ports 22/80/443, key-only SSH, fail2ban and automatic security updates.}
 \resumeItem{Added one-click Postgres and Redis on a private Docker network, with connection strings injected into linked apps and backups to Cloudflare R2;
 consolidated hosting from several providers into one unified cost.}
 \resumeItemListEnd
