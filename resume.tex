@@ -79,9 +79,9 @@
 \small Full-Stack Software Engineer \\ \vspace{1pt}
 \small Mississauga, ON $\cdot$ +1 (647) 457-6660 $\cdot$
 \href{mailto:alongerenfred@gmail.com}{alongerenfred@gmail.com} $\cdot$
-\href{https://renfred.dev}{renfred.dev} $\cdot$
-\href{https://www.linkedin.com/in/renfred-ai/}{linkedin.com/in/renfred-ai} $\cdot$
-\href{https://github.com/renfrrd-ai}{github.com/renfrrd-ai}
+\href{https://renfred.dev}{\underline{renfred.dev}} $\cdot$
+\href{https://www.linkedin.com/in/renfred-ai/}{\underline{linkedin.com/in/renfred-ai}} $\cdot$
+\href{https://github.com/renfrrd-ai}{\underline{github.com/renfrrd-ai}}
 \end{center}
 \vspace{-6pt}
 
@@ -132,7 +132,7 @@ with data pipelines that generate them directly from platform data.}
 
 \resumeSubheading
 {Software Engineer \& Automation Developer}
-{Jan. 2023 -- Jul. 2026}
+{Jan. 2023 -- Jul. 2025}
 {Apt Scholars Universal College}
 {Ogun State, Nigeria}
 \resumeItemListStart
@@ -164,12 +164,14 @@ its weighted sum and bias with the real numbers, or follow one attention row fro
 {\href{https://unstakd.com}{Unstakd}}
 {2026 -- Present}
 {Self-hosted deployment platform (PaaS) for my own projects}
-{}
+{Next.js, TypeScript, Docker, Caddy, BullMQ, Redis, PostgreSQL}
 \resumeItemListStart
-\resumeItem{Built a personal platform-as-a-service that now hosts 5 of my projects, running app deployments, database provisioning and
-management, and custom domains from one dashboard.}
-\resumeItem{Consolidated hosting from several separate providers into one platform with a single unified cost, and made shipping a new
-application a single deploy instead of configuring hosting, database and DNS services one by one.}
+\resumeItem{Built a personal PaaS that hosts 5 of my projects: a git push fires a GitHub webhook, a BullMQ worker builds a commit-tagged image
+(Dockerfile, Railpack or static), and the app goes live at its own subdomain with automatic HTTPS via Caddy.}
+\resumeItem{Made deploys zero-downtime: each new container must pass a health check before Caddy switches traffic, so a failed build never takes
+down the live version, with one-click rollback that skips the rebuild.}
+\resumeItem{Added one-click Postgres and Redis on a private Docker network, with connection strings injected into linked apps and backups to Cloudflare R2;
+consolidated hosting from several providers into one unified cost.}
 \resumeItemListEnd
 \resumeSubheading
 {\href{https://uofthub.com}{uofthub}}
