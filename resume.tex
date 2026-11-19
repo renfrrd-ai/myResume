@@ -113,6 +113,8 @@ system: exam creation, scanned scripts, grading, course analytics and per-studen
 \resumeItem{Shipped the MVP solo in about four months, owning the full stack from database schema and APIs to frontend and deployment.}
 \resumeItem{Removed export-and-reconcile work by putting auth, courses, exam delivery and grading on one PostgreSQL data model,
 with a separate role and view for lecturers, TAs, heads of department and administrators.}
+\resumeItem{Kept the app responsive during grading runs and analytics by moving them to asynchronous jobs with Redis-backed caching;
+containerized every service with Docker, with separate development and production setups.}
 \resumeItem{Launched Folio (folio.penciil.com) as a rebranded MarkUs fork instead of a rebuild, inheriting every upstream fix at near-zero cost.}
 \resumeItemListEnd
 
@@ -156,6 +158,7 @@ mentorship and workshops, a free resources hub, and online student registration 
 its weighted sum and bias with the real numbers, or follow one attention row from query--key scores through softmax.}
 \resumeItem{Convolution tab: draw on an image and watch a 3$\times$3 kernel fill the feature map step by step, with a dozen preset filters
 (Sobel, Laplacian, colour), custom kernels, stride and padding, then run it on a 160$\times$160 upload and pool it down to 20$\times$20.}
+\resumeItem{Dependency-free JavaScript with no build step; each chapter is a self-contained module, so adding an architecture takes one script.}
 \resumeItemListEnd
 \resumeSubheading
 {\href{https://uofthub.com}{uofthub}}
