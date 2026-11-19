@@ -2,7 +2,7 @@
 % Resume - Renfred Alonge
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -77,7 +77,7 @@
 \begin{center}
 {\Huge \scshape Renfred Alonge} \\ \vspace{2pt}
 \small Full-Stack Software Engineer \\ \vspace{1pt}
-\small +1 (647) 457-6660 $\cdot$
+\small Mississauga, ON $\cdot$ +1 (647) 457-6660 $\cdot$
 \href{mailto:alongerenfred@gmail.com}{alongerenfred@gmail.com} $\cdot$
 \href{https://renfred.dev}{renfred.dev} $\cdot$
 \href{https://www.linkedin.com/in/renfred-ai/}{linkedin.com/in/renfred-ai} $\cdot$
@@ -94,8 +94,8 @@
 {Honours B.Sc., Computer Science and Mathematics}
 {Mississauga, ON}
 \resumeItemListStart
-\resumeItem{GPA 4.0 / 4.0; Lester B. Pearson International Scholar (2025 cohort); Dean's List (Year 1).}
-\resumeItem{Incoming CSC392 independent study and research with Prof. Lisa Zhang on threshold concepts in ML.}
+\resumeItem{GPA 4.0 / 4.0. Lester B. Pearson International Scholar (2025 cohort); Dean's List (Year 1).}
+\resumeItem{Incoming independent study (CSC392, Winter 2027) and research with Prof. Lisa Zhang on threshold concepts in ML.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -108,13 +108,14 @@
 {\href{https://penciil.com}{Penciil} $\cdot$ Assessment Platform for Schools}
 {React.js, Node.js, PostgreSQL, Redis, Docker}
 \resumeItemListStart
-\resumeItem{Cut grading time by 30\% in a live school pilot by replacing separate tools with one workflow: exam creation,
-scanned scripts, grading, analytics and per-student feedback.}
-\resumeItem{Shipped the MVP solo in four months, owning schema, APIs, frontend and deployment.}
-\resumeItem{Put auth, courses, exams and grading on one PostgreSQL data model, ending export-and-reconcile work,
-with separate roles for lecturers, TAs, department heads and admins.}
-\resumeItem{Kept the app responsive with async grading jobs and Redis caching; containerized every service with Docker.}
-\resumeItem{Launched Folio (folio.penciil.com), a MarkUs fork that inherits every upstream fix at near-zero cost.}
+\resumeItem{Reduced grading time by 30\% in a live pilot at a secondary school by replacing its separate assessment tools with one
+system: exam creation, scanned scripts, grading, course analytics and per-student feedback in a single workflow.}
+\resumeItem{Shipped the MVP solo in about four months, owning the full stack from database schema and APIs to frontend and deployment.}
+\resumeItem{Removed export-and-reconcile work by putting auth, courses, exam delivery and grading on one PostgreSQL data model,
+with a separate role and view for lecturers, TAs, heads of department and administrators.}
+\resumeItem{Kept the app responsive during grading runs and analytics by moving them to asynchronous jobs with Redis-backed caching;
+containerized every service with Docker, with separate development and production setups.}
+\resumeItem{Launched Folio (folio.penciil.com) as a rebranded MarkUs fork instead of a rebuild, inheriting every upstream fix at near-zero cost.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -123,9 +124,10 @@ with separate roles for lecturers, TAs, department heads and admins.}
 {SMATHS-Kids Initiative $\cdot$ Educational Platform}
 {Ogun State, Nigeria}
 \resumeItemListStart
-\resumeItem{Kept \href{https://smathskids.com}{smathskids.com} running for 700+ active students as main engineer, owning accounts,
-courses, assessments and dashboards.}
-\resumeItem{Cut manual admin work by about 40\% with pipelines that generate the reports staff used to build by hand.}
+\resumeItem{Kept \href{https://smathskids.com}{smathskids.com} running for 700+ active students as its main engineer, owning student accounts,
+course content, assessments, and the admin dashboards staff used for grading and tracking progress.}
+\resumeItem{Cut manual administrative work by about 40\% by automating the student and class reports staff had assembled by hand,
+with data pipelines that generate them directly from platform data.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -134,9 +136,11 @@ courses, assessments and dashboards.}
 {Apt Scholars Universal College}
 {Ogun State, Nigeria}
 \resumeItemListStart
-\resumeItem{Cut grading turnaround by about 50\% with Python and Pandas tools that generate, grade and report on quizzes.}
-\resumeItem{Built \href{https://mathsqueteers.com}{mathsqueteers.com} for its STEM programme: resources hub and online registration (PHP).}
-\resumeItem{Taught STEM: named 2nd Best Teacher (Cowbellpedia STEM 2025); coached students to national finals.}
+\resumeItem{Cut grading turnaround by about 50\% with Pandas and Python tools that generate quizzes, grade them and turn raw marks into
+per-student reports, replacing a manual process repeated every term.}
+\resumeItem{Built \href{https://mathsqueteers.com}{mathsqueteers.com} for its maths and STEM programme: programme pages for Olympiad prep, competitions,
+mentorship and workshops, a free resources hub, and online student registration (PHP, mobile-first, SEO metadata).}
+\resumeItem{Also taught STEM: named 2nd Best Teacher (Cowbellpedia STEM 2025) and coached students to national competition finals.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -150,9 +154,11 @@ courses, assessments and dashboards.}
 {Interactive article showing what neural network layers compute, one number at a time}
 {JavaScript, HTML Canvas}
 \resumeItemListStart
-\resumeItem{Six interactive chapters, perceptron to attention; click any neuron to see its weighted sum with real numbers.}
-\resumeItem{Draw on an image and watch a 3$\times$3 kernel build the feature map, with a dozen preset filters, custom
-kernels, stride and padding, then pool a 160$\times$160 upload down to 20$\times$20.}
+\resumeItem{Built six interactive chapters (perceptron, dense networks, convolution, pooling, RNNs, attention); click any neuron to see
+its weighted sum and bias with the real numbers, or follow one attention row from query--key scores through softmax.}
+\resumeItem{Convolution tab: draw on an image and watch a 3$\times$3 kernel fill the feature map step by step, with a dozen preset filters
+(Sobel, Laplacian, colour), custom kernels, stride and padding, then run it on a 160$\times$160 upload and pool it down to 20$\times$20.}
+\resumeItem{Dependency-free JavaScript with no build step; each chapter is a self-contained module, so adding an architecture takes one script.}
 \resumeItemListEnd
 \resumeSubheading
 {\href{https://unstakd.com}{Unstakd}}
@@ -160,8 +166,10 @@ kernels, stride and padding, then pool a 160$\times$160 upload down to 20$\times
 {Self-hosted deployment platform (PaaS) for my own projects}
 {}
 \resumeItemListStart
-\resumeItem{Built a personal PaaS that hosts 5 of my projects: deployments, databases and custom domains in one dashboard.}
-\resumeItem{Replaced several hosting providers with one unified cost and made shipping a new app a single deploy.}
+\resumeItem{Built a personal platform-as-a-service that now hosts 5 of my projects, running app deployments, database provisioning and
+management, and custom domains from one dashboard.}
+\resumeItem{Consolidated hosting from several separate providers into one platform with a single unified cost, and made shipping a new
+application a single deploy instead of configuring hosting, database and DNS services one by one.}
 \resumeItemListEnd
 \resumeSubheading
 {\href{https://uofthub.com}{uofthub}}
@@ -169,10 +177,10 @@ kernels, stride and padding, then pool a 160$\times$160 upload down to 20$\times
 {Open-source project-sharing platform for U of T students across all faculties}
 {TypeScript, React, Fastify, PostgreSQL, Prisma}
 \resumeItemListStart
-\resumeItem{Architected a TypeScript monorepo (pnpm) with a shared types package so the frontend and API share one
-contract; CI runs typecheck, tests, lint and build on every push.}
-\resumeItem{Live updates via PostgreSQL LISTEN/NOTIFY, U of T sign-in (Entra ID), Cloudflare R2 storage, and AI search
-with a keyword fallback for when the model is down.}
+\resumeItem{Architected a TypeScript monorepo (pnpm workspaces) with a shared types package, so the React frontend and Fastify API
+share one contract and type errors surface at build time; GitHub Actions runs typecheck, tests, lint and build on every push.}
+\resumeItem{Delivered live updates without extra infrastructure using PostgreSQL LISTEN/NOTIFY; added U of T sign-in via Microsoft Entra ID,
+file storage on Cloudflare R2, and AI-powered project search with a keyword fallback so discovery still works if the model is down.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -180,10 +188,10 @@ with a keyword fallback for when the model is down.}
 %-----------LEADERSHIP-----------
 \section{Teaching \& Extracurriculars}
 \resumeItemListStart
-\resumeItem{Designed and presented \href{https://renfred.dev/pearson2026}{\textit{Why the Best Path Sometimes Goes Backwards}} (Pearson Conference
-2026), teaching local optima through ``The Hiker in the Fog,'' a game I designed.}
-\resumeItem{Run exam-prep sessions for classmates; reviewed applications on the conference's workshop panel.}
-\resumeItem{Volunteer: GDG on Campus UTM, GDG Toronto, TEDxUTM, UTM Math \& Computational Sciences Society.}
+\resumeItem{Designed and presented the workshop \href{https://renfred.dev/pearson2026}{\textit{Why the Best Path Sometimes Goes Backwards}} at the Pearson Conference 2026
+(U of T), teaching local optima through ``The Hiker in the Fog,'' a game I designed where players must move away from the goal to reach it.}
+\resumeItem{Run exam-prep sessions for classmates before midterms and finals; reviewed workshop applications on the conference's review panel.}
+\resumeItem{Volunteer with GDG on Campus UTM, GDG Toronto, TEDxUTM, and the UTM Math \& Computational Sciences Society (MCSS).}
 \resumeItemListEnd
 
 %-----------SKILLS-----------
@@ -191,9 +199,8 @@ with a keyword fallback for when the model is down.}
 \begin{itemize}[leftmargin=0.15in, label={}, topsep=2pt]
 \small
 \item{
-\textbf{Languages:} Python, JavaScript, TypeScript, Java, SQL, PHP, C $\cdot$ \textbf{Web:} React, Next.js, Node.js, Express, Fastify, FastAPI \\
-\textbf{Data \& Infra:} PostgreSQL, Prisma, Redis, Docker, Cloudflare R2, GitHub Actions, Linux \\
-\textbf{AI/ML:} LLM integration, Scikit-learn, Pandas, NumPy
+\textbf{Languages:} Python, JavaScript, TypeScript, Java, SQL, PHP, C $\cdot$ \textbf{Web:} React, Next.js, Node.js, Express, Fastify, FastAPI, Tailwind \\
+\textbf{Data \& Infra:} PostgreSQL, Prisma, Redis, Docker, Cloudflare R2, GitHub Actions, Linux $\cdot$ \textbf{AI/ML:} LLM integration, Scikit-learn, Pandas, NumPy
 }
 \end{itemize}
 
