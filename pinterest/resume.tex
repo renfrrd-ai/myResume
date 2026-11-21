@@ -1,0 +1,206 @@
+%-------------------------
+% Resume - Renfred Alonge
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.85in}
+\addtolength{\textheight}{1.55in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}
+{\vspace{-10pt}\scshape\raggedright\large}
+{}
+{0em}
+{}
+[{\color{black}\titlerule[0.3pt]}\vspace{-7pt}]
+
+\pdfgentounicode=1
+
+%---------- CUSTOM COMMANDS ----------
+\newcommand{\resumeItem}[1]{
+\item\normalsize{#1 \vspace{-3pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{-3pt}\item
+\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{#1} & #2 \\
+\textit{\small #3} & \textit{\small #4} \\
+\end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeItemListStart}{
+\begin{itemize}[leftmargin=0.15in, itemsep=0pt, topsep=2pt, label=\textbullet]
+}
+
+\newcommand{\resumeItemListEnd}{
+\end{itemize}\vspace{2pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{
+\begin{itemize}[leftmargin=0in, label={}, itemsep=0pt]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+\end{itemize}\vspace{-8pt}
+}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+{\Huge \scshape Renfred Alonge} \\ \vspace{2pt}
+\small Full-Stack Software Engineer \\ \vspace{1pt}
+\small Mississauga, ON $\cdot$ +1 (647) 457-6660 $\cdot$
+\href{mailto:alongerenfred@gmail.com}{alongerenfred@gmail.com} $\cdot$
+\href{https://renfred.dev}{renfred.dev} $\cdot$
+\href{https://www.linkedin.com/in/renfred-ai/}{linkedin.com/in/renfred-ai} $\cdot$
+\href{https://github.com/renfrrd-ai}{github.com/renfrrd-ai}
+\end{center}
+\vspace{-6pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of Toronto Mississauga}
+{Sep. 2025 -- Jun. 2029 (expected)}
+{Honours B.Sc., Computer Science and Mathematics}
+{Mississauga, ON}
+\resumeItemListStart
+\resumeItem{GPA 4.0 / 4.0; Dean's List (Year 1); Lester B. Pearson Scholarship (\$400,000 CAD); UTM Entrance Award (\$180,000).}
+\resumeItem{Coursework: Software Design (CSC207), Theory of Computation (CSC236), Applied AI Fundamentals (CSC211).}
+\resumeItem{Incoming independent study (CSC392, Winter 2027) and research with Prof. Lisa Zhang on threshold concepts in ML.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Founder \& Lead Engineer}
+{2026 -- Present}
+{\href{https://penciil.com}{Penciil} $\cdot$ Assessment Platform for Schools}
+{React.js, Node.js, PostgreSQL, Redis, Docker}
+\resumeItemListStart
+\resumeItem{Reduced grading time by 30\% in a live pilot at a secondary school by replacing its separate assessment tools with one
+system: exam creation, scanned scripts, grading, course analytics and per-student feedback in a single workflow.}
+\resumeItem{Shipped the MVP solo in about four months and took it to production, owning the full stack from schema to deployment.}
+\resumeItem{Removed export-and-reconcile work by putting auth, courses, exam delivery and grading on one PostgreSQL data model,
+with a separate role and view for lecturers, TAs, heads of department and administrators.}
+\resumeItem{Kept the app responsive with async grading jobs and Redis caching; containerized every service with Docker.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Full-Stack Software Engineer}
+{Jan. 2024 -- Jul. 2025}
+{SMATHS-Kids Initiative $\cdot$ Educational Platform}
+{Ogun State, Nigeria}
+\resumeItemListStart
+\resumeItem{Kept \href{https://smathskids.com}{smathskids.com} running for 700+ active students as its main engineer, owning student accounts,
+course content, assessments, and the admin dashboards staff used for grading and tracking progress.}
+\resumeItem{Cut manual administrative work by about 40\% with data pipelines that generate the reports staff built by hand.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Software Engineer \& Automation Developer}
+{Jan. 2023 -- Jul. 2025}
+{Apt Scholars Universal College}
+{Ogun State, Nigeria}
+\resumeItemListStart
+\resumeItem{Cut grading turnaround by about 50\% with Python and Pandas tools that generate, grade and report on quizzes.}
+\resumeItem{Built \href{https://mathsqueteers.com}{mathsqueteers.com} for its STEM programme: programme pages, a resources hub and online registration (PHP).}
+\resumeItem{Also taught STEM: named 2nd Best Teacher (Cowbellpedia STEM 2025); coached students to national finals.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubheading
+{\href{https://uofthub.com}{uofthub}}
+{}
+{Open-source project-sharing platform for U of T students across all faculties}
+{TypeScript, React, Fastify, PostgreSQL, Prisma}
+\resumeItemListStart
+\resumeItem{Architected a TypeScript monorepo (pnpm workspaces) with a shared types package, so the React frontend and Fastify API
+share one contract and type errors surface at build time; GitHub Actions runs typecheck, tests, lint and build on every push.}
+\resumeItem{Delivered live updates with PostgreSQL LISTEN/NOTIFY; added U of T sign-in (Entra ID), Cloudflare R2 storage,
+and AI-powered project discovery with a keyword fallback for when the model is down.}
+\resumeItemListEnd
+\resumeSubheading
+{\href{https://ml.renfred.dev}{Neural Network Visualizer}}
+{}
+{Interactive article showing what neural network layers compute, one number at a time}
+{JavaScript, HTML Canvas}
+\resumeItemListStart
+\resumeItem{Built six interactive chapters (perceptron, dense networks, convolution, pooling, RNNs, attention); click any neuron to see
+its weighted sum and bias with the real numbers, or follow one attention row from query--key scores through softmax.}
+\resumeItem{Convolution tab: draw on an image and watch a 3$\times$3 kernel fill the feature map step by step, with a dozen preset filters
+(Sobel, Laplacian), custom kernels, stride and padding, then run it on a 160$\times$160 upload and pool it down to 20$\times$20.}
+\resumeItemListEnd
+\resumeSubheading
+{\href{https://unstakd.com}{Unstakd}}
+{}
+{Self-hosted deployment platform (PaaS) for my own projects}
+{Next.js, TypeScript, Docker, Caddy, BullMQ, Redis, PostgreSQL}
+\resumeItemListStart
+\resumeItem{Built a personal PaaS that hosts 5 of my projects: a git push fires a GitHub webhook, a BullMQ worker builds a
+commit-tagged image, and the app goes live at its own subdomain with automatic HTTPS via Caddy.}
+\resumeItem{Made deploys zero-downtime: each new container must pass a health check before Caddy switches traffic, so a failed build never takes
+down the live version, with one-click rollback that skips the rebuild.}
+\resumeItem{Deployed it on an Ubuntu VPS with an idempotent setup script that hardens the server: firewall on ports 22/80/443, key-only SSH, fail2ban.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP-----------
+\section{Teaching \& Extracurriculars}
+\resumeItemListStart
+\resumeItem{Designed and presented the workshop \href{https://renfred.dev/pearson2026}{\textit{Why the Best Path Sometimes Goes Backwards}} at the Pearson Conference
+2026, teaching local optima through ``The Hiker in the Fog,'' a game I designed.}
+\resumeItem{Run exam-prep sessions for classmates before midterms and finals; reviewed conference workshop applications.}
+\resumeItem{Volunteer with GDG on Campus UTM, GDG Toronto, TEDxUTM, and UTM Math \& Computational Sciences Society.}
+\resumeItemListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}, topsep=2pt]
+\small
+\item{
+\textbf{Languages:} Python, JavaScript, TypeScript, Java, SQL, PHP, C $\cdot$ \textbf{Web:} React, Next.js, Node.js, Express, Fastify, FastAPI \\
+\textbf{Data \& Infra:} PostgreSQL, Redis, Docker, Caddy, Cloudflare R2, GitHub Actions, Linux $\cdot$ \textbf{AI/ML:} Scikit-learn, Pandas, NumPy \\
+\textbf{Practices:} Data structures \& algorithms, AI-assisted development (verifying output with tests and review), CI/CD, code review
+}
+\end{itemize}
+
+\end{document}

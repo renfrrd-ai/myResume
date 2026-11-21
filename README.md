@@ -36,6 +36,7 @@ tree at `~/texmf` using the TDS layout (`~/texmf/tex/latex/<pkg>/`), which
 - `resume.tex` — main source file
 - `resume.pdf` — compiled output
 - `research/` — research-focused version (Research section first, for roles like Google Student Researcher). Build it the same way from inside `research/`.
+- `pinterest/` — tailored for the Pinterest Software Engineering Intern role (Toronto, Summer 2027): uofthub first, coursework and AI-assisted development keywords. Build it the same way from inside `pinterest/`.
 
 ## License
 
